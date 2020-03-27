@@ -1,23 +1,31 @@
-var Robot = function (name) {
-    this.name = name;
-    this.isFunctional = true;
+class Robot {
+    constructor(name) {
+        this.name = name;
+        this.isFunctional = true
+    }
 }
 
-Robot.prototype.sayHi = function (toWho) {
-    if (isFunctional === true) {
-        console.log("Robot " + this.name + " greets " + toWho);
+const robot = new Robot('ieava');
+
+robot.sayHi = function (fromPerson) {
+    if (this.isFunctional === true) {
+        console.log("Robot " + this.name + " greets " + fromPerson);
     }
     else {
         console.log("Robot " + this.name + "is broken");
     }
 };
 
-Robot.prototype.changeName = function (newname) {
-    console.log("Robot " + this.name + "changes name to " + newname);
-    name = newname;
+robot.changeName = function (newName) {
+    console.log("Robot " + this.name + " changes name to " + newName);
+    this.name = newName;
 };
 
-Robot.prototype.fixIt = function () {
+robot.fixIt = function () {
     this.isFunctional = true;
     console.log("Robot " + this.name + "was fixed");
 };
+
+console.log(robot.name);
+robot.changeName('edmundo');
+robot.sayHi('Lina');

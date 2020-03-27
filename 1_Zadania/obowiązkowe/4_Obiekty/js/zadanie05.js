@@ -1,4 +1,4 @@
-var animals = [
+const animals = [
     {
         type: "cat",
         breed: "persian",
@@ -29,5 +29,8 @@ var animals = [
             }
         ]
     }
+];
 
-]
+animals.forEach(animalObj => Object.values(animalObj).forEach(animalValue => {
+    console.log(animalValue);
+}));

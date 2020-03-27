@@ -8,25 +8,26 @@
 //Twoj komentarz ...
 function jeden() {
 
-    //Twoj komentarz ...
+    // scope zmiennej : "zmienna1", jest ograniczony do scope funkcji jeden()
+    // Dlatego co za tym idzie, "zmienna1" będzie dostepna tylko w zakresie funkcji jeden()
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    // pod funkcja dwa() ma dostep do zmiennych ze scope funkcja jeden()
     function dwa() {
 
-        //Twoj komentarz ...
+        //zmienna1 jest dostepna, scope funkcji dwa() miesci sie w scope funcji jeden() wywołanej
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        //zmienna2 jest incjalizowana wraz z deklaracja poczatkowej wartosci, ale nie jest wywoływana ani razu
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    //wywołanie funkcji dwa()
     dwa();
 
-    //Twoj komentarz ...
+    //zmienna2 jest dostepna tylko w scope funkcji dwa(), dlatego poza blokiem funkcji dwa() nie mamy dostepu do tej zmiennej
     console.log(zmienna2)
 }
 
-//Twoj komentarz ...
+//wywołanie funkcji jeden()
 jeden()

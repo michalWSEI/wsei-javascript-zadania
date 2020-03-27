@@ -1,4 +1,4 @@
-var movie = {
+const movie = {
     director: "Peter Jackson",
     writers: [" J.R.R. Tolkien ", "Fran Walsh", "Philippa Boyens", "Peter Jackson"],
     stars: ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
@@ -8,4 +8,8 @@ var movie = {
     year: 2001,
     time: "2h 58 min",
     category: " Adventure, Drama, Fantasy"
+};
+
+for (let item in Object.values(movie)) {
+    console.log(Object.values(movie)[item])
 }

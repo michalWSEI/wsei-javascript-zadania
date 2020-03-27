@@ -8,7 +8,19 @@ function callOtherFunction(nameOfFunction) {
 
 callOtherFunction(function (a, b) {
     console.log("Pierwsza liczba:", a);
-    console.log("Druga liczba", b)
-    console.log("Wynik", a + b)
-})
+    console.log("Druga liczba", b);
+    console.log("Wynik", a + b);
+});
 
+callOtherFunction((a, b) => {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b);
+    console.log("Mnozenie: ", a * b);
+});
+
+callOtherFunction((a, b) => {
+    console.log("Pierwsza liczba:", a);
+    console.log("Druga liczba", b);
+    console.log("wartosc absoltna a: ", Math.abs(a));
+    console.log("wartosc absoltna b: ", Math.abs(b));
+});
