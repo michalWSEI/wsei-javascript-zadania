@@ -47,5 +47,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	favColor.innerHTML = 'Turquoise Blue';
 	favMeal.innerHTML = 'Zapiekany schab ze śliwka';
 	// exc3
-
+	document
+		.querySelector('.exercise.ex3 > ul')
+		.classList
+		.add('menu');
+	Array
+		.from(document.querySelectorAll('.exercise.ex3 > ul > li'))
+		.forEach(element => {
+			element.classList.add('menuElement');
+			element.classList.remove('error');
+		});
+	// exc4
+	Array
+		.from(document.querySelectorAll('.exercise.ex4 > ul > li'))
+		.forEach((liElement, index) => liElement.setAttribute('data-id', ++index))
 });
